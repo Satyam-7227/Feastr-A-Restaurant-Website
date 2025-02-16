@@ -140,12 +140,12 @@ img {
     font-family: 'Great Vibes', cursive;
     display: block;
     color: #e2a925;
-    font-size: 55px;
+    font-size: 50px;
 }
 
 .carousel-caption p {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 25px;
 }
 
 .carousel-inner img {
@@ -169,7 +169,7 @@ img {
 .row {
     margin: 0 -15px;
     width: 100%;
-    /* display: inline-block; */
+    display: inline-block;
 }
 
 .cols6 {
@@ -195,7 +195,6 @@ img {
     border-style: none;
     overflow-clip-margin: content-box;
     overflow: clip;
-
 }
 
 .about-feature-image .img-one {
@@ -266,6 +265,43 @@ img {
     max-width: 43%;
 }
 
+/* ---------------------------Chef-Swiper--------------------------- */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mySwiper img {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%);
+    /* FF 35+ */
+}
+
+.mySwiper img:hover {
+    -webkit-filter: grayscale(100%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%);
+    /* FF 35+ */
+}
 
 /* ---------------------------Zomato--------------------------- */
 .order-online {
@@ -332,11 +368,19 @@ a {
 /* ---------------------------Media-Queries--------------------------- */
 @media only screen and (max-width: 1170px) {
 
+    /* ---------------------------Home-Carosal--------------------------- */
+    .carousel-caption h1 {
+        font-size: 250%;
+    }
+
+    .carousel-caption p {
+        font-size: 100%;
+    }
+
     /* ---------------------------About-1--------------------------- */
     .about-feature-image .img-one,
     .catering-image .img-one {
         display: inline-block;
-        /* max-width: 45%; */
     }
 
     .about-feature-image .img-two,
@@ -436,41 +480,4 @@ a {
     .order-online li {
         width: 24%;
     }
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.swiper-container {
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mySwiper img {
-    transition: filter .5s ease-in-out;
-    -webkit-filter: grayscale(0%);
-    /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(0%);
-    /* FF 35+ */
-}
-
-.mySwiper img:hover {
-    -webkit-filter: grayscale(100%);
-    /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(100%);
-    /* FF 35+ */
 }
