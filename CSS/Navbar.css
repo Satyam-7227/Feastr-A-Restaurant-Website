@@ -1,0 +1,215 @@
+/* ---------------------------Navbar->950px--------------------------- */
+
+.site-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 8;
+}
+
+.site-title {
+    float: left;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.site-title,
+.page-title {
+    font-weight: normal;
+}
+
+.site-title,
+.site-description,
+.main-navigation,
+.nav-links,
+.page-title,
+.page-description,
+.comment-author .fn,
+.no-comments,
+h2.author-title,
+p.author-bio,
+h4 {
+    font-size: 1.125em;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.site-title img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    border-style: none;
+}
+
+.main-navigation {
+    float: right;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 13px;
+    margin-right: 50px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.main-navigation li {
+    display: inline-block;
+    padding-left: 40px;
+}
+
+.site-branding,
+.main-navigation ul.main-menu>li,
+.social-navigation,
+.author-description .author-bio,
+.nav-links {
+    line-height: 1.25;
+}
+
+.main-navigation li a {
+    color: #fff;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    font-size: 1.2em;
+}
+
+.main-navigation li a:hover {
+    color: #e2a925;
+    transition: 0.3s;
+}
+
+#toggle-menu {
+    -webkit-appearance: none;
+    position: relative;
+    border: none;
+    background: none;
+    width: 36px;
+    height: 35px;
+    align-self: center;
+    padding: 0;
+    border-radius: 4px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4.5px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+/* ---------------------------Navbar-<950px--------------------------- */
+
+@media (max-width:950px) {
+    .site-title {
+        float: none;
+        position: relative;
+        left: 10px;
+        display: inline-block;
+    }
+
+    .site-title img {
+        max-width: 120px;
+    }
+
+    #toggle-menu {
+        display: block;
+        margin-right: 6px;
+    }
+
+    .main-navigation {
+        float: none;
+        clear: both;
+    }
+
+    .main-navigation .menu-main-container {
+        display: block;
+        position: absolute;
+        top: 120%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        z-index: 10;
+    }
+
+    .main-navigation .menu-main-container.active {
+        max-height: 500px;
+    }
+
+    .main-navigation li {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-navigation li a {
+        display: block;
+        padding: 10px 20px;
+        text-shadow: none;
+        color: #111;
+    }
+
+    .main-navigation .menu-main-container a.active {
+        color: #e2a925 !important; 
+        font-weight: bold;
+    }
+}
+
+.menu-main-container a {
+    color: black; /* Default color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-main-container a.active {
+    color: #e2a925 !important; /* Highlight active page */
+    font-weight: bold;
+}

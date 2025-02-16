@@ -1,0 +1,99 @@
+/* ---------------------------Footer->950px--------------------------- */
+
+.site-footer {
+    background: url(https://www.1944.in/wp-content/themes/bonoboz/images/footer-bg.jpg) no-repeat center bottom;
+    background-size: cover;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    height: 500px;
+    padding-top: 50px;
+    margin-top: 90px;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    border-style: none;
+}
+
+.footer-address {
+    margin-bottom: 40px;
+}
+
+.footer-address p {
+    margin: 0 0 10px;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+.social {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social li {
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 25px;
+}
+
+.footerlinks {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.footerlinks li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.site-info {
+    float: right;
+    margin-right: 10px;
+}
+
+/* ---------------------------Footer-<950px--------------------------- */
+
+@media (max-width:950px) {
+
+    body,
+    .site-footer {
+        font-size: 16px;
+    }
+
+    .site-footer {
+        height: auto;
+    }
+
+    .footerlinks,
+    .site-info {
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+
+    .footerlinks li {
+        margin: 0 15px;
+    }
+}

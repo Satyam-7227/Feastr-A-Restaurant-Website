@@ -1,0 +1,439 @@
+body {
+    /* -webkit-font-smoothing: antialiased; */
+    /* -moz-osx-font-smoothing: grayscale; */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #111;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+    /* text-rendering: optimizeLegibility; */
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+    margin: 1rem 0;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+    font-family: 'Great Vibes', cursive;
+    display: block;
+    color: #e2a925;
+    font-size: 80%;
+}
+
+p {
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.cols1,
+.cols2,
+.cols3,
+.cols4,
+.cols5,
+.cols6,
+.cols7,
+.cols8,
+.cols9,
+.cols10,
+.cols11,
+.cols12 {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    transition: background 150ms ease-in-out;
+    background: #bb842c;
+    border: none;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 0.88889em;
+    font-weight: 700;
+    line-height: 1.2;
+    outline: none;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+img {
+    border-style: none;
+}
+
+/* ---------------------------Home-Carosal--------------------------- */
+.carousel-caption {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.5); */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.carousel-caption h1 {
+    font-family: 'Great Vibes', cursive;
+    display: block;
+    color: #e2a925;
+    font-size: 55px;
+}
+
+.carousel-caption p {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* ---------------------------About-1--------------------------- */
+.about-section {
+    padding: 150px 0 50px;
+    width: 100%;
+}
+
+.wrap {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.row {
+    margin: 0 -15px;
+    width: 100%;
+    display: inline-block;
+}
+
+.cols6 {
+    width: 45%;
+    /* padding-left: 5px; */
+    margin-left: 10px;
+}
+
+.cols6 p {
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.about-feature-image {
+    position: relative;
+}
+
+.about-feature-image img {
+    display: block;
+    height: auto;
+    max-width: 125%;
+    position: relative;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
+}
+
+.about-feature-image .img-one {
+    max-width: 40%;
+}
+
+.about-feature-image .img-two {
+    position: absolute;
+    left: 300px;
+    top: -100px;
+    max-width: 43%;
+}
+
+/* ---------------------------About-2--------------------------- */
+.ourmenu {
+    background: url(https://www.1944.in/wp-content/themes/bonoboz/images/menu-bg.jpg) no-repeat center top;
+    /* padding: 100px 0; */
+    background-size: cover;
+}
+
+.home-ourmenu {
+    padding: 150px 0 50px;
+    width: 100%;
+}
+
+.cols6 {
+    width: 45%;
+    /* padding-left: 5px; */
+    margin-left: 20px;
+}
+
+.home-ourmenu .cols6 h2 {
+    color: rgb(232, 232, 232);
+}
+
+.home-ourmenu .cols6 p {
+    word-wrap: break-word;
+    text-align: justify;
+    color: rgb(232, 232, 232);
+}
+
+.catering-image {
+    position: relative;
+}
+
+.catering-image img {
+    display: block;
+    height: auto;
+    max-width: 125%;
+    position: relative;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
+}
+
+.catering-image .img-one {
+    max-width: 40%;
+    position: relative;
+    right: 9px;
+    bottom: 90px;
+}
+
+.catering-image .img-two {
+    position: absolute;
+    left: 275px;
+    top: -50px;
+    max-width: 43%;
+}
+
+
+/* ---------------------------Zomato--------------------------- */
+.order-online {
+    background: url(https://www.1944.in/wp-content/themes/bonoboz/images/orderonline-bg.jpg) no-repeat center top;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 80px 0;
+    margin: 60px 0px;
+}
+
+h2 {
+    size: 2em;
+}
+
+.order-online ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    line-height: 1.8;
+}
+
+.order-online li {
+    display: inline-block;
+    max-width: 24.5%;
+}
+
+a {
+    transition: color 110ms ease-in-out;
+    color: #e2a925;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.order-online img {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    border-style: none;
+}
+
+/* ---------------------------About-3--------------------------- */
+.catering-section {
+    padding: 150px 0 50px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.cols6 {
+    width: 45%;
+    /* padding-left: 5px; */
+    margin-left: 20px;
+}
+
+.catering-section .cols6 p {
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+/* ---------------------------Media-Queries--------------------------- */
+@media only screen and (max-width: 1170px) {
+
+    /* ---------------------------About-1--------------------------- */
+    .about-feature-image .img-one,
+    .catering-image .img-one {
+        display: inline-block;
+        /* max-width: 45%; */
+    }
+
+    .about-feature-image .img-two,
+    .catering-image .img-two {
+        display: inline-block;
+        position: relative;
+        left: 0px;
+    }
+
+    .about-section,
+    .home-ourmenu,
+    .catering-section {
+        padding: 20px 0px;
+    }
+
+    .about-section .cols6,
+    .home-ourmenu .cols6,
+    .catering-section .cols6 {
+        float: none;
+        width: auto;
+    }
+
+    .about-feature-image,
+    .catering-image {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .cols6 h2,
+    .cols6 p,
+    .about-feature-image {
+        padding-left: 18px;
+        padding-right: 5px;
+    }
+
+
+    .about-feature-image .img-one,
+    .catering-image .img-two {
+        max-width: 44%;
+    }
+
+    .about-feature-image .img-one img,
+    .about-feature-image .img-two img,
+    .catering-image .img-one img,
+    .catering-image .img-two img {
+        width: 100%;
+    }
+
+    .about-feature-image .img-two,
+    .catering-image .img-one {
+        top: 0;
+        position: static;
+        max-width: 53%;
+    }
+
+    /* ---------------------------About-2--------------------------- */
+    .catering-image .img-one {
+        max-width: 45%;
+    }
+
+    .catering-image .img-two {
+        top: 0;
+        position: static;
+        max-width: 47%;
+    }
+
+    .home-ourmenu .cols6 a {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:950px) {
+
+    /* ---------------------------Home-Carosal--------------------------- */
+    .carousel-caption h1 {
+        font-size: 190%;
+    }
+
+    .carousel-caption p {
+        /* font-weight: 00; */
+        font-size: 100%;
+    }
+}
+
+/* ---------------------------Zomato--------------------------- */
+@media only screen and (max-width: 1024px) {
+    .order-online {
+        padding: 20px 0;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .order-online li {
+        width: 24%;
+    }
+}

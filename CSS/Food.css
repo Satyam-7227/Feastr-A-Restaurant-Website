@@ -1,0 +1,495 @@
+body {
+    /* -webkit-font-smoothing: antialiased; */
+    /* -moz-osx-font-smoothing: grayscale; */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #111;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+    /* text-rendering: optimizeLegibility; */
+}
+
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+    margin: 1rem 0;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+    font-family: 'Great Vibes', cursive;
+    display: block;
+    color: #e2a925;
+    font-size: 80%;
+}
+
+.cols1,
+.cols2,
+.cols3,
+.cols4,
+.cols5,
+.cols6,
+.cols7,
+.cols8,
+.cols9,
+.cols10,
+.cols11,
+.cols12 {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+/* ---------------------------Food-Banner--------------------------- */
+.inner-banner {
+    background: url(https://www.1944.in/wp-content/themes/bonoboz/images/inner-banner.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.page-template-about .inner-banner {
+    margin-bottom: 0;
+}
+
+.wrap {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.inner-banner .wrap {
+    min-height: 350px;
+}
+
+.banner-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    margin-top: -85px;
+    text-align: center;
+    color: #fff;
+}
+
+.inner-banner .banner-content {
+    margin-top: 0;
+}
+
+.inner-banner .banner-content h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* ---------------------------Home/Food--------------------------- */
+#breadcrumbs {
+    font-size: 15px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+a {
+    transition: color 110ms ease-in-out;
+    color: #e2a925;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* ---------------------------Food-Description--------------------------- */
+.entry:first-of-type {
+    margin-top: 0;
+}
+
+.about-page-text {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 80px 0;
+    margin-bottom: 0 !important;
+}
+
+.entry .entry-content>*,
+.entry .entry-summary>* {
+    margin: 0 0 32px 0;
+    max-width: 100%;
+}
+
+.entry .entry-content>*>*:last-child,
+.entry .entry-summary>*>*:last-child {
+    margin-bottom: 0;
+}
+
+.entry .entry-content>*>*:first-child,
+.entry .entry-summary>*>*:first-child {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.about-page-text p {
+    margin: 0 auto 30px;
+    max-width: 850px;
+}
+
+.entry .entry-content p {
+    word-wrap: break-word;
+}
+
+.about-page-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------------------------Food-Menu--------------------------- */
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 150px auto 0;
+    gap: 50px;
+}
+
+.menu-image {
+    flex: 1;
+    max-width: 50%;
+    padding: 0px 10px;
+}
+
+.menu-image img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-style: none;
+    /* padding: 0px 10px; */
+    border-radius: 20px;
+}
+
+.menu-list {
+    flex: 1;
+    padding-left: 30px;
+    max-height: 470px;
+    overflow-y: auto;
+    padding-right: 10px;
+    position: relative;
+}
+
+.menu-list h2 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.menu-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #333;
+    line-height: 2.4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-list li div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ---------------------------Food-Order--------------------------- */
+.item-price {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.add-btn {
+    background-color: #bb842c;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.add-btn.disabled {
+    background-color: black;
+    color: white;
+    pointer-events: none;
+}
+
+#cart-container {
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.cart-container-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#finalize-purchase,
+#clear-cart,
+#goback-food {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #d4951e;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+}
+
+#cart-content ul {
+    padding-left: 10px;
+}
+
+#cart-content .menu-item {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.5;
+}
+
+#cart-content .menu-item div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qty-price {
+    color: black;
+    padding-right: 10px;
+}
+
+.quantity-container {
+    display: inline-block;
+}
+
+.quantity-container {
+    background-color: #bb842c;
+    border: 0px;
+    color: #fff;
+    height: 90%;
+    display: inline-flex;
+    align-items: center;
+    font-size: 17px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-top: 2.5px;
+}
+
+.qty-btn[onclick^="decreaseQuantity"] {
+    padding-right: 5px;
+    padding-left: 0px;
+    padding-bottom: 2px;
+    border: 0px;
+    background-color: inherit;
+}
+
+.qty-btn[onclick^="increaseQuantity"] {
+    padding-left: 5px;
+    padding-right: 0px;
+    border: 0px;
+    background-color: inherit;
+}
+
+.qty-span {
+    margin: 0px 5px;
+    font-size: 17px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.qty-btn[onclick^="decreaseQuantity"],
+.qty-btn[onclick^="increaseQuantity"],
+.qty-span {
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+}
+
+.cart-navigation {
+    text-align: center;
+    margin: 20px;
+}
+
+.cart-btn {
+    background-color: #c9941e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ---------------------------Media-Queries--------------------------- */
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .ourteam,
+    .order-online,
+    .about-page-text,
+    .ourmenu,
+    .section,
+    .page-template-catering .photo-gallery {
+        padding: 20px 0;
+    }
+
+    .about-section,
+    .home-ourmenu,
+    .catering-section {
+        padding: 100px 0 20px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    /* ---------------------------Food-Menu--------------------------- */
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 130px auto 0;
+    }
+
+    .menu-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0px;
+    }
+
+    .menu-image img {
+        padding: 0px 10px;
+    }
+
+    .menu-list {
+        width: 100%;
+        padding: 0 20px;
+        max-width: 800px;
+    }
+
+    .menu-list h2 {
+        font-size: 2.1rem;
+    }
+
+    .menu-list li {
+        font-size: 20px;
+    }
+
+    .banner {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2em;
+    }
+
+    /* ---------------------------Food-Banner--------------------------- */
+    .inner-banner .wrap {
+        min-height: 200px;
+    }
+
+    .inner-banner .banner-content {
+        padding-top: 40px;
+    }
+
+    /* ---------------------------Food-Description--------------------------- */
+    .about-page-text p {
+        text-align: justify;
+        padding: 0px 20px;
+    }
+
+    .about-page-text h2 {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .menu-list li {
+        font-size: 14px;
+    }
+
+    /* ---------------------------Food-Order--------------------------- */
+
+    #cart-container {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .cart-container-buttons {
+        height: 55px;
+    }
+
+    #finalize-purchase,
+    #clear-cart,
+    #goback-food {
+        margin: 0px 5px;
+        font-size: 14px;
+    }
+}
