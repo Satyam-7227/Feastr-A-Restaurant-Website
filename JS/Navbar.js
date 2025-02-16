@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="wrap">
         <h1 class="site-title"><a href="Home.html" rel="home">
           <img src="../img/feastrlogo.png"
-            alt="Feastr" width="200">
+            alt="Feastr" width="100rem">
         </a></h1>
         <nav id="site-navigation" class="main-navigation" aria-label="Top Menu">
           <button type="button" id="toggle-menu"><span class="hamburger">
