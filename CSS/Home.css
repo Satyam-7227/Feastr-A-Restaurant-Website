@@ -169,7 +169,7 @@ img {
 .row {
     margin: 0 -15px;
     width: 100%;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .cols6 {
@@ -436,4 +436,41 @@ a {
     .order-online li {
         width: 24%;
     }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mySwiper img {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%);
+    /* FF 35+ */
+}
+
+.mySwiper img:hover {
+    -webkit-filter: grayscale(100%);
+    /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%);
+    /* FF 35+ */
 }

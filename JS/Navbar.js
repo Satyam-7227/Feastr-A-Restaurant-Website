@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const navbarHTML = `
       <div class="wrap">
         <h1 class="site-title"><a href="Home.html" rel="home">
-          <img src="https://www.1944.in/wp-content/themes/bonoboz/images/logo.png"
-            alt="1944 The Hocco Kitchen" width="200">
+          <img src="../img/feastrlogo.png"
+            alt="Feastr" width="200">
         </a></h1>
         <nav id="site-navigation" class="main-navigation" aria-label="Top Menu">
           <button type="button" id="toggle-menu"><span class="hamburger">
