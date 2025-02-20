@@ -7,7 +7,7 @@ function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Function to add item to cart
+// ---------------------------Add-To-Cart---------------------------
 function addItem(button, itemName, price) {
     if (!cart[itemName]) {
         cart[itemName] = { price: price, quantity: 1 };
@@ -18,30 +18,7 @@ function addItem(button, itemName, price) {
     updateCart();
 }
 
-// Increase quantity
-function increaseQuantity(itemName) {
-    if (cart[itemName]) {
-        cart[itemName].quantity++;
-        saveCart();
-        updateCart();
-    }
-}
-
-// Decrease quantity or remove item
-function decreaseQuantity(itemName) {
-    if (cart[itemName]) {
-        if (cart[itemName].quantity > 1) {
-            cart[itemName].quantity--;
-        } else {
-            delete cart[itemName]; // Remove item from cart
-            resetAddButton(itemName);
-        }
-        saveCart();
-        updateCart();
-    }
-}
-
-// Reset "Add" button after item is removed
+// ---------------------------Reset-Add-Button---------------------------
 function resetAddButton(itemName) {
     let buttons = document.querySelectorAll(".add-btn");
     buttons.forEach(btn => {
@@ -52,7 +29,7 @@ function resetAddButton(itemName) {
     });
 }
 
-// Update Cart Display (works for both Food.html and Cart.html)
+// ---------------------------Update-Cart-Food-Pages---------------------------
 function updateCart() {
     let cartContainer = document.getElementById("cart-content");
     
@@ -92,43 +69,6 @@ function updateCart() {
     cartContainer.innerHTML = cartHTML;
 }
 
-// Ensure "Add" buttons stay updated when returning to Food Page
-// function updateFoodPageButtons() {
-//     let buttons = document.querySelectorAll(".add-btn");
-
-//     buttons.forEach(btn => {
-//         let itemName = btn.getAttribute("onclick").match(/'([^']+)'/)[1]; // Extract item name
-
-//         if (cart[itemName]) {
-//             btn.classList.add("disabled");
-//             btn.innerText = "Added";
-//         } else {
-//             btn.classList.remove("disabled");
-//             btn.innerText = "Add";
-//         }
-//     });
-// }
-
-// function updateFoodPageButtons() {
-//     let buttons = document.querySelectorAll(".add-btn");
-//     let cart = JSON.parse(localStorage.getItem("cart")) || {}; // Reload cart from storage
-
-//     buttons.forEach(btn => {
-//         let match = btn.getAttribute("onclick").match(/'([^']+)'/);
-//         if (match) {
-//             let itemName = match[1]; // Extract item name
-
-//             if (cart[itemName]) {
-//                 btn.classList.add("disabled");
-//                 btn.innerText = "Added";
-//             } else {
-//                 btn.classList.remove("disabled");
-//                 btn.innerText = "Add";
-//             }
-//         }
-//     });
-// }
-
 function updateFoodPageButtons() {
     let buttons = document.querySelectorAll(".add-btn");
     let cart = JSON.parse(localStorage.getItem("cart")) || {}; // Reload cart from storage
@@ -149,8 +89,30 @@ function updateFoodPageButtons() {
     });
 }
 
+// ---------------------------Increase-Quantity---------------------------
+function increaseQuantity(itemName) {
+    if (cart[itemName]) {
+        cart[itemName].quantity++;
+        saveCart();
+        updateCart();
+    }
+}
 
-// Finalize Purchase (Show Total)
+// ---------------------------Decrease-Remove-Quantity---------------------------
+function decreaseQuantity(itemName) {
+    if (cart[itemName]) {
+        if (cart[itemName].quantity > 1) {
+            cart[itemName].quantity--;
+        } else {
+            delete cart[itemName]; // Remove item from cart
+            resetAddButton(itemName);
+        }
+        saveCart();
+        updateCart();
+    }
+}
+
+// ---------------------------Finalize-Purchase-Button---------------------------
 function finalizePurchase() {
     if (Object.keys(cart).length === 0) {
         alert("Please add items to the cart first.");
@@ -166,7 +128,7 @@ function finalizePurchase() {
     cartContainer.innerHTML += `<p><strong>Total:</strong> ₹${total}</p>`;
 }
 
-// Clear Cart
+// ---------------------------Clear-Cart-Button---------------------------
 function clearCart() {
     cart = {};
     saveCart();
@@ -178,247 +140,11 @@ function clearCart() {
     });
 }
 
-
-// let cart = JSON.parse(localStorage.getItem("cart")) || {}; // Load cart from localStorage
-
-// // Function to save cart to localStorage
-// function saveCart() {
-//     localStorage.setItem("cart", JSON.stringify(cart));
-// }
-
-// // Function to add item to cart
-// function addItem(button, itemName, price) {
-//     if (!cart[itemName]) {
-//         cart[itemName] = { price: price, quantity: 1 };
-//         button.classList.add("disabled");
-//         button.innerText = "Added";
-//     }
-//     saveCart();
-//     updateCart();
-// }
-
-// // Increase quantity
-// function increaseQuantity(itemName) {
-//     if (cart[itemName]) {
-//         cart[itemName].quantity++;
-//         saveCart();
-//         updateCart();
-//     }
-// }
-
-// // Decrease quantity or remove item
-// function decreaseQuantity(itemName) {
-//     if (cart[itemName]) {
-//         if (cart[itemName].quantity > 1) {
-//             cart[itemName].quantity--;
-//         } else {
-//             delete cart[itemName]; // Remove item from cart
-//             resetAddButton(itemName);
-//         }
-//         saveCart();
-//         updateCart();
-//     }
-// }
-
-// // Reset Add button after item is removed
-// function resetAddButton(itemName) {
-//     let buttons = document.querySelectorAll(".add-btn");
-//     buttons.forEach(btn => {
-//         if (btn.getAttribute("onclick").includes(`addItem(this, '${itemName}',`)) {
-//             btn.classList.remove("disabled");
-//             btn.innerText = "Add";
-//         }
-//     });
-// }
-
-// // Update Cart Display (works for both Food.html and Cart.html)
-// function updateCart() {
-//     let cartContainer = document.getElementById("cart-content");
-//     if (!cartContainer) return; // Prevent errors if cart is not on the page
-
-//     cartContainer.innerHTML = "";
-
-//     if (Object.keys(cart).length === 0) {
-//         cartContainer.innerHTML = "Place your order now";
-//         return;
-//     }
-
-//     let total = 0;
-//     let cartHTML = "<ul>";
-//     for (let item in cart) {
-//         let subtotal = cart[item].price * cart[item].quantity;
-//         total += subtotal;
-
-//         cartHTML += `
-//             <li class="menu-item">
-//                 <span class="item-name">${item}</span> 
-//                 <div>
-//                     <span class="qty-price">₹${cart[item].price}</span>
-//                     <div class="quantity-container">
-//                         <button class="qty-btn" onclick="decreaseQuantity('${item}')">-</button>
-//                         <span class="qty-span">${cart[item].quantity}</span>
-//                         <button class="qty-btn" onclick="increaseQuantity('${item}')">+</button>
-//                     </div>
-//                 </div>
-//             </li>`;
-//     }
-//     cartHTML += "</ul>";
-
-//     cartContainer.innerHTML = cartHTML;
-// }
-
-// // Finalize Purchase (Show Total)
-// function finalizePurchase() {
-//     if (Object.keys(cart).length === 0) {
-//         alert("Please add items to the cart first.");
-//         return;
-//     }
-
-//     let total = 0;
-//     for (let item in cart) {
-//         total += cart[item].price * cart[item].quantity;
-//     }
-
-//     let cartContainer = document.getElementById("cart-content");
-//     cartContainer.innerHTML += `<p><strong>Total:</strong> ₹${total}</p>`;
-// }
-
-// // Clear Cart
-// function clearCart() {
-//     cart = {};
-//     saveCart();
-//     updateCart();
-//     let buttons = document.querySelectorAll(".add-btn");
-//     buttons.forEach(btn => {
-//         btn.classList.remove("disabled");
-//         btn.innerText = "Add";
-//     });
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let cart = {}; // To store selected items
-
-// // Function to add item to cart
-// function addItem(button, itemName, price) {
-//     if (!cart[itemName]) {
-//         cart[itemName] = { price: price, quantity: 1 };
-
-//         // Disable the "Add" button & change its color
-//         button.classList.add("disabled");
-//         button.innerText = "Added";
-
-//         // Add item to cart display
-//         updateCart();
-//     }
-// }
-
-// // Increase quantity
-// function increaseQuantity(itemName) {
-//     cart[itemName].quantity++;
-//     updateCart();
-// }
-
-// // Decrease quantity or remove item
-// function decreaseQuantity(itemName) {
-//     if (cart[itemName].quantity > 1) {
-//         cart[itemName].quantity--;
-//     } else {
-//         delete cart[itemName]; // Remove item from cart
-//         resetAddButton(itemName);
-//     }
-//     updateCart();
-// }
-
-// // Reset Add button after item is removed
-// function resetAddButton(itemName) {
-//     let buttons = document.querySelectorAll(".add-btn");
-//     buttons.forEach(btn => {
-//         if (btn.onclick.toString().includes(`addItem(this, '${itemName}',`)) {
-//             btn.classList.remove("disabled");
-//             btn.innerText = "Add";
-//         }
-//     });
-// }
-
-// // Update Cart Display
-// function updateCart() {
-//     let cartContainer = document.getElementById("cart-content");
-//     cartContainer.innerHTML = "";
-
-//     if (Object.keys(cart).length === 0) {
-//         cartContainer.innerHTML = "Place your order now";
-//         return;
-//     }
-
-//     let total = 0;
-//     let cartHTML = "<ul>";
-//     for (let item in cart) {
-//         let subtotal = cart[item].price * cart[item].quantity;
-//         total += subtotal;
-
-//         cartHTML += `
-//             <li class="menu-item">
-//                 <span class="item-name">${item}</span> 
-//                 <div>
-//                     <span class="qty-price">₹${cart[item].price}</span>
-//                     <div class="quantity-container">
-//                         <button class="qty-btn" onclick="decreaseQuantity('${item}')">-</button>
-//                         <span class="qty-span">${cart[item].quantity}</span>
-//                         <button class="qty-btn" onclick="increaseQuantity('${item}')">+</button>
-//                     </div>
-//                 </div>
-//             </li>`;
-//     }
-//     cartHTML += "</ul>";
-
-//     cartContainer.innerHTML = cartHTML;
-// }
-
-// // Finalize Purchase (Show Total)
-// function finalizePurchase() {
-//     if (Object.keys(cart).length === 0) {
-//         alert("Please add items to the cart first.");
-//         return;
-//     }
-
-//     let total = 0;
-//     for (let item in cart) {
-//         total += cart[item].price * cart[item].quantity;
-//     }
-
-//     let cartContainer = document.getElementById("cart-content");
-//     cartContainer.innerHTML += `<p><strong>Total:</strong> ₹${total}</p>`;
-// }
-
-// // Clear Cart
-// function clearCart() {
-//     cart = {};
-//     document.getElementById("cart-content").innerHTML = "Place your order now";
-
-//     // Reset all Add buttons
-//     let buttons = document.querySelectorAll(".add-btn");
-//     buttons.forEach(btn => {
-//         btn.classList.remove("disabled");
-//         btn.innerText = "Add";
-//     });
-// }
+// ---------------------------Back-To-Food---------------------------
+function goBackToFood() {
+    localStorage.setItem("cart", JSON.stringify(cart)); // Ensure cart is saved
+    window.location.href = "Food.html";
+}
 
 // ---------------------------Food-Menu---------------------------
 const menuData = [
