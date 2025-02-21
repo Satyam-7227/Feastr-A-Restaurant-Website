@@ -150,7 +150,7 @@ function goBackToFood() {
 const menuData = [
     {
         category: "Beverages",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/beverages-and-milk-shakes.jpg",
+        image: "../img/beverages.jpg",
         items: [
             { name: "Classic Mojito", price: 150 },
             { name: "Watermelon Mojito", price: 170 },
@@ -165,25 +165,24 @@ const menuData = [
     },
     {
         category: "Starters",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/starters.jpg",
+        image: "../img/starters.jpg",
         items: [
             { name: "Karari Roomali", price: 200 },
             { name: "Cheesy Cigar Rolls", price: 220 },
             { name: "Smoked Paneer Tikka", price: 250 },
             { name: "Paneer Pudina Tikka", price: 240 },
             { name: "Loaded Nachos", price: 180 },
-            { name: "Crispy Honey Chilli Water Chestnuts", price: 190 },
+            { name: "Crispy Chilli Water Chestnuts", price: 190 },
             { name: "Cantonese Spring Rolls", price: 210 },
             { name: "Crispy Veg Lai Style", price: 200 },
-            { name: "Hocco Triple Paneer Tikka Platter", price: 280 },
             { name: "Assorted Kebab Platter", price: 300 },
             { name: "Chinese Platter", price: 320 },
-            { name: "Paneer Tikka/ Malai Paneer Tikka", price: 250 },
+            { name: "Paneer Tikka", price: 250 },
             { name: "Szechwan Chilli Paneer Dry", price: 230 },
             { name: "Crispy Veg. Pepper Salt", price: 200 },
             { name: "Veg Manchurian Dry", price: 220 },
             { name: "Hara Kebab/ Dahi Kebab", price: 260 },
-            { name: "Punjabi Samosa/ Veg. Cutlets", price: 150 },
+            { name: "Punjabi Samosa/ Cutlets", price: 150 },
             { name: "Dal Makhni Kulchette", price: 270 },
             { name: "Masala Khakhra Papad", price: 100 },
             { name: "Chaats", price: 180 }
@@ -191,7 +190,7 @@ const menuData = [
     },
     {
         category: "Pizza and Accompaniment",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/stone-fried-pizzas.jpg",
+        image: "../img/pizzas.jpg",
         items: [
             { name: "Moroccan Salad", price: 180 },
             { name: "Waldrof Salad", price: 190 },
@@ -203,29 +202,27 @@ const menuData = [
             { name: "Cheesy Mexican Pizza", price: 350 },
             { name: "Paneer Exotica Pizza", price: 400 },
             { name: "Smoked Paneer Pizza", price: 380 },
-            { name: "Double Cheese Margherita Pizza", price: 320 },
-            { name: "HOCCO Special Italian Farmhouse Pizza", price: 390 }
+            { name: "Double Cheese Margherita", price: 320 },
         ]
     },
     {
         category: "Soups",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/soups.jpg",
+        image: "../img/soups.jpg",
         items: [
             { name: "Khowsuey", price: 120 },
             { name: "Sweet Corn Veg", price: 110 },
             { name: "Hot & Sour/Manchow", price: 130 },
             { name: "Asian Bowl", price: 150 },
             { name: "Cream of Tomato", price: 100 },
-            // { name: "Hocco's Hot Pot", price: 140 },
-            { name: "Creamy Water Chestnut Soup", price: 160 },
+            { name: "Creamy Water Chestnut", price: 160 },
             { name: "Truffle Potato Leek Soup", price: 180 }
         ]
     },
     {
         category: "World Cuisine + Rice & Noodles",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/world-cuisine.jpg",
+        image: "../img/world-cuisine.jpg",
         items: [
-            { name: "Baked Spinach & Cheese Dumplings", price: 280 },
+            { name: "Baked Spinach with Dumplings", price: 280 },
             { name: "Spaghetti/Penne", price: 260 },
             { name: "Baked Macaroni/Vegetable", price: 240 },
             { name: "Baked Lasagne", price: 290 },
@@ -235,22 +232,22 @@ const menuData = [
             { name: "Veg Fried Rice", price: 190 },
             { name: "Mexican Hot Pot Rice", price: 250 },
             { name: "American Chop Suey", price: 270 },
-            { name: "Szechwan Chilli Paneer Gravy", price: 300 },
+            { name: "Szechwan Chilli Paneer", price: 300 },
             { name: "Manchurian with Gravy", price: 280 }
         ]
     },
     {
         category: "Indian",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/indian.jpg",
+        image: "../img/indian.jpg",
         items: [
             { name: "Smoked Paneer", price: 290 },
-            { name: "Paneer Kofta in Saffron Gravy", price: 320 },
+            { name: "Paneer Kofta with Gravy", price: 320 },
             { name: "Balti Paneer", price: 300 },
             { name: "Tawa Paneer Anardana", price: 310 },
             { name: "Paneer Tikka Lababdar", price: 330 },
             { name: "Lucknavi Tawa Paneer", price: 310 },
             { name: "Subz Tiranga", price: 290 },
-            { name: "Malai Kofta/Vegetable Kofta", price: 280 },
+            { name: "Malai Kofta", price: 280 },
             { name: "Avadhi Subz Handi", price: 320 },
             { name: "Dal Makhani", price: 250 },
             { name: "Cheese Butter Masala", price: 330 },
@@ -261,7 +258,7 @@ const menuData = [
     },
     {
         category: "Rice & Roti",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/rice-and-roti.jpg",
+        image: "../img/rice-and-roti.jpg",
         items: [
             { name: "Puri (Speciality)", price: 100 },
             { name: "Naan", price: 40 },
@@ -282,7 +279,7 @@ const menuData = [
     },
     {
         category: "Desserts",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/desserts.jpg",
+        image: "../img/desserts.jpg",
         items: [
             { name: "Shahi Kulfi Falooda", price: 200 },
             { name: "Tiramisu Meltdown", price: 250 },
@@ -292,7 +289,7 @@ const menuData = [
     },
     {
         category: "Sizzlers",
-        image: "https://www.1944.in/wp-content/themes/bonoboz/images/menu/sizzlers1.jpg",
+        image: "../img/sizzlers.jpg",
         items: [
             { name: "Asian Delicacy Sizzler", price: 350 },
             { name: "Avadhi Sizzler", price: 370 },
