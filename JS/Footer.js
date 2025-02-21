@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="wrap">
             <div class="footer-logo">
                 <a href="https://www.1944.in/" rel="home">
-                    <img src="../img/feastrlogo.png" alt="1944 The Hocco Kitchen"
+                    <img src="../img/feastrlogo.png" alt="Feastr - Dining Redefined"
                         width="150">
                 </a>
             </div>
@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     Sindhubhavan Road, Bodakdev, Ahmedabad - 380064
                 </p>
                 <p>Phone: <a href="#">+91 8460084600</a></p>
-                <p>Email: <a href="#">letstalk@hocco.in</a></p>
+                <p>Email: <a href="#">letstalk@Feastr.in</a></p>
                 <ul class="social">
-                    <li><a href="https://www.facebook.com/1944thehoccokitchen/" target="_blank">
+                    <li><a href="https://www.facebook.com/people/Palladium-Ahmedabad/100089805115656/" target="_blank">
                             <img src="../img/facebook.svg" alt="facebook">
                         </a></li>
-                    <li><a href="https://www.instagram.com/1944thehoccokitchen/" target="_blank">
+                    <li><a href="https://www.instagram.com/palladiumahmedabad/?hl=en" target="_blank">
                             <img src="../img/instagram.svg" alt="instagram">
                         </a></li>
                 </ul>
