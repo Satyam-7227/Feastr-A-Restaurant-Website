@@ -28,3 +28,15 @@ function validate() {
         }
     }
 }
+
+function sendEmail() {
+    function sendEmail() {
+        // template_mhoz83a
+        var templateParams = {
+            to_name: document.getElementById("name").value,
+            to_email: document.getElementById("email").value,
+        };
+        emailjs.send('service_so58vs9', 'template_mhoz83a', templateParams)
+            .then(alert("Email sent"))
+    }
+}
