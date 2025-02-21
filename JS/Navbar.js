@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <ul id="menu-main" class="main-menu">
               <li class="menu-item"><a href="About_Us.html">About Us</a></li>
               <li class="menu-item"><a href="Food.html">Food</a></li>
+              <li class="menu-item"><a href="Cart.html">Cart</a></li>
               <li class="menu-item"><a href="Store_Locator.html">Store Locator</a></li>
               <li class="menu-item"><a href="Contact_Us.html">Contact Us</a></li>
             </ul>

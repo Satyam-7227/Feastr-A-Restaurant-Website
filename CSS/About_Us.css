@@ -67,7 +67,7 @@ img {
 
 /* ---------------------------Inner-Banner--------------------------- */
 .inner-banner {
-    background: url(https://www.1944.in/wp-content/themes/bonoboz/images/inner-banner.jpg) no-repeat center center;
+    background: url(../img/banner-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
