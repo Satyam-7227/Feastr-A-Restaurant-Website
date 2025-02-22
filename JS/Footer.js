@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const footerHTML = `
         <div class="wrap">
             <div class="footer-logo">
-                <a href="https://www.1944.in/" rel="home">
+                <a href="Home.html" rel="home">
                     <img src="../img/feastrlogo.png" alt="Feastr - Dining Redefined"
                         width="150">
                 </a>
